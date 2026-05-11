@@ -15,21 +15,21 @@ export default function Home() {
       <DashboardPreview />
       
       {/* Call to Action Section */}
-      <section className="py-32 bg-brand-surface relative overflow-hidden border-t border-white/5">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-brand-violet/10 blur-[120px] rounded-full" />
+      <section className="py-40 bg-white relative overflow-hidden border-t border-slate-50">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-brand-primary/5 blur-[120px] rounded-full" />
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
-          <h2 className="text-4xl md:text-7xl font-display font-black text-white mb-8 tracking-tighter leading-none">
-            READY TO <br />
-            <span className="text-brand-neon">EVOLVE?</span>
+          <h2 className="text-4xl md:text-7xl font-display font-black text-slate-900 mb-8 tracking-tighter leading-none">
+            SIAP UNTUK <br />
+            <span className="luxe-gradient-text">BEREVOLUSI?</span>
           </h2>
-          <p className="text-slate-400 text-lg mb-12 max-w-xl mx-auto font-light">
-            Bergabunglah dengan ratusan sekolah progresif yang menjadikan pendidikan lebih transparan dan efisien bersama StudyTrack.
+          <p className="text-slate-500 text-lg mb-12 max-w-xl mx-auto font-medium">
+            Bergabunglah dengan ratusan sekolah progresif yang telah mendigitalisasi ekosistem pendidikan mereka bersama StudyTrack.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-            <button className="w-full sm:w-auto bg-brand-neon text-brand-black px-12 py-5 rounded-2xl font-black uppercase tracking-widest hover:scale-110 transition-all shadow-[0_0_50px_rgba(217,255,0,0.3)]">
+            <button className="w-full sm:w-auto bg-brand-primary text-white px-12 py-5 rounded-[2rem] font-bold text-lg hover:shadow-[0_20px_40px_rgba(99,102,241,0.3)] hover:-translate-y-1 transition-all active:scale-95">
               Mulai Sekarang
             </button>
-            <button className="w-full sm:w-auto border border-white/10 text-white px-12 py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-white/5 transition-all">
+            <button className="w-full sm:w-auto border border-slate-200 text-slate-600 px-12 py-5 rounded-[2rem] font-bold text-lg hover:bg-slate-50 transition-all">
               Jadwalkan Demo
             </button>
           </div>

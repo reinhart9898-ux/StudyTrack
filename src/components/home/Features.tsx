@@ -42,42 +42,39 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="py-24 bg-brand-black relative">
+    <section className="py-32 bg-white relative">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
           <div className="max-w-2xl">
-            <h2 className="text-brand-neon font-mono font-bold uppercase tracking-[0.3em] text-xs mb-4">Core Engine</h2>
-            <p className="text-4xl md:text-6xl font-display font-black text-white tracking-tighter leading-none">
-              FUTURE-TECH <br /> FOR CLASSROOMS.
+            <h2 className="text-brand-primary font-bold uppercase tracking-[0.3em] text-[11px] mb-6">INTI TEKNOLOGI</h2>
+            <p className="text-4xl md:text-6xl font-display font-black text-slate-900 tracking-tighter leading-[0.95]">
+              INFRASTRUKTUR <br />
+              <span className="luxe-gradient-text">MASA DEPAN.</span>
             </p>
           </div>
-          <p className="text-slate-500 max-w-sm text-sm font-light uppercase tracking-widest leading-loose">
-            Digitally Native infrastructure designed for institutions that prioritize speed, accuracy, and student growth.
+          <p className="text-slate-400 max-w-sm text-base font-medium leading-relaxed">
+            Satu platform untuk semua kebutuhan manajemen pendidikan Anda, dirancang dengan fokus pada pengalaman pengguna dan kecepatan.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div 
               key={index}
-              className={`p-8 rounded-[2.5rem] glass-card group transition-all duration-500 hover:bg-white/10 ${
-                index === 0 ? "md:col-span-2 lg:col-span-3 lg:row-span-2" : 
-                index === 1 ? "md:col-span-2 lg:col-span-3" : 
-                "md:col-span-2 lg:col-span-2"
-              }`}
+              className="p-10 premium-card group"
             >
-              <div className="bg-brand-neon/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-brand-neon group-hover:rotate-[360deg] transition-all duration-700">
-                <div className="text-brand-neon group-hover:text-brand-black transition-colors">
+              <div className="bg-brand-primary/10 w-16 h-16 rounded-3xl flex items-center justify-center mb-10 group-hover:bg-brand-primary group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                <div className="text-brand-primary group-hover:text-white transition-colors">
                   {feature.icon}
                 </div>
               </div>
-              <h3 className="text-2xl font-display font-black text-white mb-4 italic">{feature.title}</h3>
-              <p className="text-slate-400 text-sm font-light leading-relaxed">
+              <h3 className="text-2xl font-display font-black text-slate-900 mb-4">{feature.title}</h3>
+              <p className="text-slate-500 text-sm font-medium leading-relaxed">
                 {feature.description}
               </p>
               
-              <div className="mt-10 h-1 bg-white/5 w-full rounded-full overflow-hidden">
-                <div className="h-full bg-brand-neon w-0 group-hover:w-full transition-all duration-700 delay-100" />
+              <div className="mt-12 h-1 bg-slate-50 w-full rounded-full overflow-hidden">
+                <div className="h-full bg-brand-primary/30 w-0 group-hover:w-full transition-all duration-700" />
               </div>
             </div>
           ))}

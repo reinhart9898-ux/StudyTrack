@@ -1,31 +1,37 @@
 import { motion } from 'motion/react';
-import { TrendingUp, UserCheck, BookOpen, Clock } from 'lucide-react';
+import { TrendingUp, UserCheck, BookOpen, GraduationCap } from 'lucide-react';
 
 export default function DashboardPreview() {
   return (
-    <section className="py-24 bg-slate-50 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:flex items-center gap-16">
-          <div className="lg:w-1/2 mb-16 lg:mb-0">
-            <h2 className="text-4xl font-bold text-slate-900 mb-6 leading-tight">
-              Analitik Canggih, <br />
-              <span className="text-indigo-600">Dashboard Sederhana.</span>
+    <section className="py-24 bg-brand-surface relative overflow-hidden">
+      {/* Decorative Blur */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-violet/5 blur-[160px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="lg:flex items-center gap-20">
+          <div className="lg:w-1/2 mb-20 lg:mb-0">
+            <div className="inline-block px-4 py-1 rounded-full bg-brand-violet/20 border border-brand-violet/30 mb-6 font-mono text-[10px] font-bold text-brand-violet uppercase tracking-widest">
+              Live OS v2.0
+            </div>
+            <h2 className="text-4xl md:text-6xl font-display font-black text-white mb-8 leading-[1.1]">
+              PRECISION <br />
+              <span className="text-brand-teal italic">INTERFACE.</span>
             </h2>
-            <p className="text-slate-600 text-lg mb-8 leading-relaxed">
-              Tidak ada lagi lembar kerja manual. StudyTrack menyediakan pusat komando terpadu di mana setiap pencapaian siswa terlihat dalam sekejap.
+            <p className="text-slate-400 text-lg mb-10 font-light leading-relaxed">
+              Ucapkan selamat tinggal pada kerumitan manual. StudyTrack menghadirkan pusat komando digital yang intuitif, dirancang untuk performa tanpa kompromi.
             </p>
             
-            <div className="space-y-6">
+            <div className="space-y-8">
               {[
-                { icon: <TrendingUp className="w-5 h-5" />, text: "Kalkulasi IPK otomatis & analisis tren", color: "bg-emerald-100 text-emerald-600" },
-                { icon: <UserCheck className="w-5 h-5" />, text: "Pelacakan keterlibatan per subjek & aktivitas", color: "bg-blue-100 text-blue-600" },
-                { icon: <BookOpen className="w-5 h-5" />, text: "Heatmap penyelesaian tugas yang mendetail", color: "bg-indigo-100 text-indigo-600" },
+                { icon: <TrendingUp className="w-5 h-5" />, text: "Kalkulasi IPK otomatis & analisis tren cerdas", color: "text-brand-neon" },
+                { icon: <UserCheck className="w-5 h-5" />, text: "Pelacakan keterlibatan tingkat mikroskopis", color: "text-brand-teal" },
+                { icon: <BookOpen className="w-5 h-5" />, text: "Visualisasi heatmap distribusi tugas kelas", color: "text-brand-violet" },
               ].map((item, i) => (
-                <div key={i} className="flex items-center space-x-4">
-                  <div className={`p-3 rounded-xl ${item.color}`}>
+                <div key={i} className="flex items-center space-x-5 group">
+                  <div className={`transition-transform group-hover:scale-125 duration-300 ${item.color}`}>
                     {item.icon}
                   </div>
-                  <span className="font-semibold text-slate-700">{item.text}</span>
+                  <span className="text-sm font-semibold tracking-wide text-slate-300">{item.text}</span>
                 </div>
               ))}
             </div>
@@ -33,59 +39,68 @@ export default function DashboardPreview() {
 
           <div className="lg:w-1/2 relative">
             <motion.div 
-              initial={{ x: 100, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
+              initial={{ rotateY: 20, opacity: 0 }}
+              whileInView={{ rotateY: 0, opacity: 1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-[2rem] shadow-2xl p-8 border border-slate-200 relative z-10"
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="glass-card rounded-[3.5rem] p-10 relative z-10 border-white/20 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)]"
             >
-              <div className="flex justify-between items-center mb-8 pb-4 border-b border-slate-100">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 rounded-full bg-slate-100" />
+              <div className="flex justify-between items-center mb-10">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-violet to-brand-teal p-[1px]">
+                    <div className="w-full h-full bg-brand-surface rounded-2xl flex items-center justify-center">
+                      <div className="w-6 h-6 rounded-full bg-brand-neon blur-[8px] absolute opacity-50" />
+                      <GraduationCap className="w-6 h-6 text-white relative z-10" />
+                    </div>
+                  </div>
                   <div>
-                    <h4 className="font-bold text-sm text-slate-900">Dr. Sarah Johnson</h4>
-                    <p className="text-xs text-slate-500">Mathematics Dept.</p>
+                    <h4 className="font-display font-black text-xs text-white">STUDYTRACK OS</h4>
+                    <p className="text-[10px] font-mono text-slate-500 uppercase">System Status: Stable</p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 rounded-full bg-indigo-500 animate-pulse" />
-                  <span className="text-xs font-bold text-indigo-600">SINKRONISASI LANGSUNG</span>
+                <div className="px-3 py-1 rounded-full bg-brand-neon/10 border border-brand-neon/20 flex items-center space-x-2">
+                  <div className="w-2 h-2 rounded-full bg-brand-neon animate-pulse" />
+                  <span className="text-[10px] font-black text-brand-neon tracking-tighter">SINKRONISASI LANGSUNG</span>
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                  <p className="text-xs text-slate-500 mb-1">Kehadiran Kelas</p>
-                  <p className="text-2xl font-black text-slate-900">94.2%</p>
-                  <div className="mt-2 w-full bg-slate-200 h-1.5 rounded-full">
-                    <div className="bg-indigo-500 h-full w-[94.2%] rounded-full" />
+              <div className="grid grid-cols-2 gap-6 mb-10">
+                <div className="bg-white/[0.03] p-6 rounded-[2.5rem] border border-white/5">
+                  <p className="text-[10px] font-mono text-slate-500 mb-2 uppercase tracking-widest italic">Success Rate</p>
+                  <p className="text-4xl font-display font-black text-brand-teal">94.2%</p>
+                  <div className="mt-4 w-full bg-white/10 h-[2px] rounded-full">
+                    <div className="bg-brand-teal h-full w-[94.2%] rounded-full shadow-[0_0_10px_#2DD4BF]" />
                   </div>
                 </div>
-                <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                  <p className="text-xs text-slate-500 mb-1">Rata-rata Nilai</p>
-                  <p className="text-2xl font-black text-slate-900">A-</p>
-                  <p className="text-[10px] text-emerald-600 font-bold mt-1">↑ 2% dari bulan lalu</p>
+                <div className="bg-white/[0.03] p-6 rounded-[2.5rem] border border-white/5">
+                  <p className="text-[10px] font-mono text-slate-500 mb-2 uppercase tracking-widest italic">Avg Grade</p>
+                  <p className="text-4xl font-display font-black text-brand-violet">A-</p>
+                  <p className="text-[10px] text-brand-neon font-black mt-2 uppercase">↑ 2.4% Momentum</p>
                 </div>
               </div>
 
-              <div className="space-y-4">
-                <h5 className="text-xs font-bold text-slate-400 uppercase tracking-widest">Tugas Terbaru</h5>
+              <div className="space-y-6">
+                <h5 className="text-[10px] font-mono font-bold text-slate-500 uppercase tracking-[0.3em] mb-4">Latest Operations</h5>
                 {[
-                  { name: "Aljabar II - Kuis 3", status: "Selesai", score: "88/100" },
-                  { name: "Kalkulus - Proyek Grup", status: "Menunggu", score: "--" },
+                  { name: "Aljabar II - Kuis 3", status: "Verified", val: "A" },
+                  { name: "Kalkulus - Final", status: "Building", val: ".." },
                 ].map((task, i) => (
-                  <div key={i} className="flex justify-between items-center p-3 rounded-xl bg-slate-50 text-sm">
-                    <span className="font-semibold text-slate-700">{task.name}</span>
-                    <span className={`px-2 py-1 rounded text-[10px] font-bold ${task.status === 'Selesai' ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700'}`}>
-                      {task.status}
-                    </span>
+                  <div key={i} className="flex justify-between items-center p-4 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-white/10 transition-colors">
+                    <span className="text-xs font-bold text-slate-300">{task.name}</span>
+                    <div className="flex items-center gap-3">
+                       <span className="text-[10px] font-mono text-slate-500">{task.val}</span>
+                       <span className={`px-2 py-1 rounded-lg text-[10px] font-black tracking-tighter uppercase ${task.status === 'Verified' ? 'bg-brand-teal/20 text-brand-teal' : 'bg-brand-violet/20 text-brand-violet'}`}>
+                        {task.status}
+                      </span>
+                    </div>
                   </div>
                 ))}
               </div>
             </motion.div>
 
-            {/* Decorative blobs */}
-            <div className="absolute -top-10 -right-10 w-64 h-64 bg-indigo-200 rounded-full blur-[100px] opacity-60 z-0" />
-            <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-blue-200 rounded-full blur-[80px] opacity-60 z-0" />
+            {/* Floaties */}
+            <div className="absolute -top-12 -right-12 w-48 h-48 bg-brand-violet opacity-20 blur-[100px] z-0" />
+            <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-brand-teal opacity-10 blur-[100px] z-0" />
           </div>
         </div>
       </div>

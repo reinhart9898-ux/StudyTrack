@@ -19,34 +19,36 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Beranda', path: '/' },
     { name: 'Galeri', path: '/gallery' },
-    { name: 'Tentang Kami', path: '/about' },
+    { name: 'Tentang', path: '/about' },
   ];
 
   return (
     <nav 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/80 backdrop-blur-md border-b border-slate-200 py-3 shadow-sm' : 'bg-transparent py-5'
+      className={`fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl z-50 transition-all duration-500 rounded-2xl border ${
+        scrolled 
+          ? 'bg-brand-surface/40 backdrop-blur-2xl border-white/10 py-3 shadow-2xl' 
+          : 'bg-transparent border-transparent py-5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="px-6">
         <div className="flex justify-between items-center">
-          <Link to="/" className="flex items-center space-x-2 group">
-            <div className="bg-indigo-600 p-2 rounded-lg group-hover:rotate-6 transition-transform">
-              <GraduationCap className="w-6 h-6 text-white" />
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="bg-brand-neon p-2 rounded-xl group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(217,255,0,0.3)]">
+              <GraduationCap className="w-6 h-6 text-brand-black" />
             </div>
-            <span className={`text-xl font-bold tracking-tight ${scrolled ? 'text-slate-900' : 'text-slate-900'} sm:text-white sm:mix-blend-difference`}>
-              Study<span className="text-indigo-600">Track</span>
+            <span className="text-xl font-display font-black tracking-tighter text-white">
+              STUDY<span className="text-brand-neon">TRACK</span>
             </span>
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-10">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
-                className={`text-sm font-semibold transition-colors hover:text-indigo-600 ${
-                  location.pathname === link.path ? 'text-indigo-600' : 'text-slate-600'
+                className={`text-xs uppercase tracking-widest font-bold transition-all hover:text-brand-neon ${
+                  location.pathname === link.path ? 'text-brand-neon underline decoration-2 underline-offset-8' : 'text-slate-400'
                 }`}
               >
                 {link.name}
@@ -54,9 +56,9 @@ export default function Navbar() {
             ))}
             <Link
               to="/get-started"
-              className="bg-indigo-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-indigo-700 transition-all hover:shadow-indigo-500/40 hover:scale-105 active:scale-95 shadow-xl shadow-indigo-200"
+              className="bg-white text-brand-black px-6 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider hover:bg-brand-neon transition-all hover:scale-105 active:scale-95"
             >
-              Mulai Sekarang
+              Mulai
             </Link>
           </div>
 
@@ -64,7 +66,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-md text-slate-600 hover:text-indigo-600 focus:outline-none"
+              className="p-2 rounded-xl text-slate-300 hover:text-brand-neon transition-colors"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -76,28 +78,28 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-b border-slate-100 overflow-hidden"
+            initial={{ opacity: 0, y: -20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -20, scale: 0.95 }}
+            className="md:hidden absolute top-full left-0 right-0 mt-4 mx-0 bg-brand-surface border border-white/10 rounded-2xl overflow-hidden shadow-2xl"
           >
-            <div className="px-4 pt-2 pb-6 space-y-1">
+            <div className="p-6 space-y-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block px-3 py-4 text-base font-medium border-l-4 transition-colors ${
+                  className={`block text-lg font-display font-bold uppercase tracking-tight transition-colors ${
                     location.pathname === link.path
-                      ? 'bg-indigo-50 border-indigo-600 text-indigo-700'
-                      : 'border-transparent text-slate-600 hover:bg-slate-50 hover:text-indigo-600'
+                      ? 'text-brand-neon'
+                      : 'text-slate-400 hover:text-white'
                   }`}
                 >
                   {link.name}
                 </Link>
               ))}
-              <div className="pt-4 px-3">
-                <button className="w-full bg-indigo-600 text-white px-5 py-3 rounded-xl font-bold hover:bg-indigo-700">
+              <div className="pt-4">
+                <button className="w-full bg-brand-neon text-brand-black px-5 py-4 rounded-xl font-black uppercase tracking-wider">
                   Mulai Sekarang
                 </button>
               </div>

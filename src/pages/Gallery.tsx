@@ -14,71 +14,80 @@ const galleryItems = [
 ];
 
 export default function Gallery() {
+  const images = [
+    {
+      url: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800',
+      title: 'Kolaborasi Digital',
+      category: 'Infrastruktur',
+      size: 'lg'
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800',
+      title: 'Sesi Diskusi Aktif',
+      category: 'Akademik',
+      size: 'sm'
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800',
+      title: 'Laboratorium Inovasi',
+      category: 'Fasilitas',
+      size: 'sm'
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800',
+      title: 'Sistem Terintegrasi',
+      category: 'Teknologi',
+      size: 'lg'
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800',
+      title: 'Pembelajaran Masa Depan',
+      category: 'Visi',
+      size: 'sm'
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800',
+      title: 'Prestasi Global',
+      category: 'Outcome',
+      size: 'sm'
+    }
+  ];
+
   return (
-    <div className="pt-24 pb-16 bg-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 tracking-tight">Momen <span className="text-indigo-600">Institusi</span></h1>
-          <p className="text-slate-500 text-lg max-w-2xl mx-auto">
-            Gambaran dinamis institusi yang menggunakan StudyTrack untuk memantau dan merayakan setiap langkah perjalanan edukasi mereka.
+    <div className="pt-32 pb-24 min-h-screen bg-brand-black">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="mb-20">
+          <h1 className="text-6xl md:text-8xl font-display font-black text-white italic tracking-tighter mb-8 leading-none">
+            CURATED <br />
+            <span className="text-brand-neon">MOMENTS.</span>
+          </h1>
+          <p className="text-slate-500 font-mono text-xs uppercase tracking-[0.4em] max-w-sm leading-loose">
+            Intip bagaimana teknologi masa depan mengubah pengalaman belajar hari ini.
           </p>
         </div>
 
-        {/* Filter categories placeholder */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {['Semua', 'Aktivitas', 'Belajar', 'Pencapaian', 'Teknologi'].map((cat) => (
-            <button 
-              key={cat}
-              className={`px-6 py-2 rounded-full text-sm font-semibold transition-all ${
-                cat === 'Semua' ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-200' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {galleryItems.map((item, index) => (
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+          {images.map((image, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group relative overflow-hidden rounded-[2.5rem] aspect-[4/5] sm:aspect-square bg-slate-100"
+              transition={{ delay: index * 0.1 }}
+              className="relative group rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl"
             >
-              <img 
-                src={`${item.url}?auto=format&fit=crop&q=80&w=800`}
-                alt={item.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              <img
+                src={image.url}
+                alt={image.title}
+                className="w-full grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                <div className="flex justify-between items-center text-white">
-                  <div>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-indigo-400 mb-1 block">{item.category}</span>
-                    <h3 className="text-xl font-bold">{item.title}</h3>
-                  </div>
-                  <div className="p-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
-                    <Camera className="w-5 h-5" />
-                  </div>
-                </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                <span className="text-[10px] font-mono text-brand-neon mb-2 uppercase tracking-widest">{image.category}</span>
+                <h3 className="text-2xl font-display font-black text-white">{image.title}</h3>
               </div>
             </motion.div>
           ))}
-        </div>
-
-        <div className="mt-20 text-center">
-          <div className="bg-indigo-50 p-12 rounded-[3.5rem] border border-indigo-100">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 tracking-tight">Abadikan Kisah Institusi Anda</h2>
-            <p className="text-slate-600 mb-8 max-w-xl mx-auto text-sm md:text-base">
-              Mulai dokumentasikan kesuksesan hari ini. StudyTrack membantu Anda bukan sekadar melacak angka, tapi momen-momen yang berarti.
-            </p>
-            <button className="bg-indigo-600 text-white px-8 py-4 rounded-full font-bold hover:bg-indigo-700 transition-all">
-              Unggah Pencapaian Baru
-            </button>
-          </div>
         </div>
       </div>
     </div>

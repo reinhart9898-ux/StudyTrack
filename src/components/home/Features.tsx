@@ -9,32 +9,32 @@ import {
 
 const features = [
   {
-    icon: <BarChart3 className="w-8 h-8 text-indigo-600" />,
+    icon: <BarChart3 className="w-8 h-8" />,
     title: "Analitik Real-time",
     description: "Visualisasi instan performa siswa, mengidentifikasi tantangan sebelum menjadi masalah."
   },
   {
-    icon: <CheckCircle2 className="w-8 h-8 text-indigo-600" />,
+    icon: <CheckCircle2 className="w-8 h-8" />,
     title: "Penilaian Digital",
     description: "Alat evaluasi efisien yang mempercepat pemberian nilai dan umpan balik konstruktif."
   },
   {
-    icon: <Calendar className="w-8 h-8 text-indigo-600" />,
+    icon: <Calendar className="w-8 h-8" />,
     title: "Pelacakan Kehadiran",
     description: "Sistem absensi digital otomatis yang tersinkronisasi langsung dengan notifikasi orang tua."
   },
   {
-    icon: <Bell className="w-8 h-8 text-indigo-600" />,
+    icon: <Bell className="w-8 h-8" />,
     title: "Notifikasi Pintar",
     description: "Tetap terdepan dengan peringatan otomatis untuk tugas, perubahan jadwal, dan momen penting."
   },
   {
-    icon: <Users className="w-8 h-8 text-indigo-600" />,
+    icon: <Users className="w-8 h-8" />,
     title: "Portal Orang Tua",
     description: "Berikan akses kepada orang tua melalui dashboard khusus perjalanan akademik anak mereka."
   },
   {
-    icon: <ShieldCheck className="w-8 h-8 text-indigo-600" />,
+    icon: <ShieldCheck className="w-8 h-8" />,
     title: "Penyimpanan Cloud Aman",
     description: "Semua data akademik dienkripsi dan dicadangkan harian pada infrastruktur kelas enterprise."
   }

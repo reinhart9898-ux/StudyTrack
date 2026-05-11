@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Play, Camera } from 'lucide-react';
+import { Play, Camera, TrendingUp } from 'lucide-react';
 
 export default function Hero() {
   return (

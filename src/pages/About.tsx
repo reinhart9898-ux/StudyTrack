@@ -1,11 +1,10 @@
 import { motion } from 'motion/react';
-import { Target, Eye, Shield, Zap, Heart, Award } from 'lucide-react';
 
 export default function About() {
   const stats = [
-    { label: 'Institusi', value: '500+', color: 'text-brand-neon' },
-    { label: 'Siswa Aktif', value: '1.2jt', color: 'text-brand-violet' },
-    { label: 'Efisiensi', value: '88%', color: 'text-brand-teal' },
+    { label: 'Institusi', value: '500+' },
+    { label: 'Siswa Aktif', value: '1.2jt' },
+    { label: 'Efisiensi', value: '88%' },
   ];
 
   return (

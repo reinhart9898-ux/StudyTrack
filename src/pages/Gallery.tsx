@@ -1,17 +1,5 @@
 import { motion } from 'motion/react';
-import { Camera, Image as ImageIcon, Video, Heart } from 'lucide-react';
-
-const galleryItems = [
-  { url: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655', title: 'Perpustakaan Modern', category: 'Lingkungan' },
-  { url: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f', title: 'Sesi Belajar Kelompok', category: 'Belajar' },
-  { url: 'https://images.unsplash.com/photo-1531482615713-2afd69097998', title: 'Laboratorium Sains', category: 'Aktivitas' },
-  { url: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3', title: 'Pembelajaran Digital', category: 'Teknologi' },
-  { url: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644', title: 'Kehidupan Kampus', category: 'Sosial' },
-  { url: 'https://images.unsplash.com/photo-1509062522246-3755977927d7', title: 'Hari Kelulusan', category: 'Pencapaian' },
-  { url: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952', title: 'Workshop Kreatif', category: 'Aktivitas' },
-  { url: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8', title: 'Bootcamp Coding', category: 'Teknologi' },
-  { url: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b', title: 'Yoga Pagi', category: 'Olahraga' },
-];
+import { Camera } from 'lucide-react';
 
 export default function Gallery() {
   const images = [
@@ -78,7 +66,7 @@ export default function Gallery() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="relative group rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-xl luxe-shadow bg-white p-4"
+              className="relative group rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-xl bg-white p-4"
             >
               <div className="overflow-hidden rounded-[2rem] relative">
                 <img

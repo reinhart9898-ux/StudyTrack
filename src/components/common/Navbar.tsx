@@ -17,9 +17,9 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Gallery', path: '/gallery' },
-    { name: 'About', path: '/about' },
+    { name: 'Beranda', path: '/' },
+    { name: 'Galeri', path: '/gallery' },
+    { name: 'Tentang Kami', path: '/about' },
   ];
 
   return (
@@ -45,7 +45,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-indigo-600 ${
+                className={`text-sm font-semibold transition-colors hover:text-indigo-600 ${
                   location.pathname === link.path ? 'text-indigo-600' : 'text-slate-600'
                 }`}
               >
@@ -54,9 +54,9 @@ export default function Navbar() {
             ))}
             <Link
               to="/get-started"
-              className="bg-indigo-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-indigo-700 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-indigo-200"
+              className="bg-indigo-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-indigo-700 transition-all hover:shadow-indigo-500/40 hover:scale-105 active:scale-95 shadow-xl shadow-indigo-200"
             >
-              Get Started
+              Mulai Sekarang
             </Link>
           </div>
 
@@ -98,7 +98,7 @@ export default function Navbar() {
               ))}
               <div className="pt-4 px-3">
                 <button className="w-full bg-indigo-600 text-white px-5 py-3 rounded-xl font-bold hover:bg-indigo-700">
-                  Get Started
+                  Mulai Sekarang
                 </button>
               </div>
             </div>

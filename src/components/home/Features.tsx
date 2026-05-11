@@ -10,33 +10,33 @@ import {
 const features = [
   {
     icon: <BarChart3 className="w-8 h-8 text-indigo-600" />,
-    title: "Real-time Analytics",
-    description: "Instant visualization of student performance, identifying gaps before they become problems."
+    title: "Analitik Real-time",
+    description: "Visualisasi instan performa siswa, mengidentifikasi tantangan sebelum menjadi masalah."
   },
   {
     icon: <CheckCircle2 className="w-8 h-8 text-indigo-600" />,
-    title: "Digital Grading",
-    description: "Streamlined assessment tools that make grading faster and feedback more constructive."
+    title: "Penilaian Digital",
+    description: "Alat evaluasi efisien yang mempercepat pemberian nilai dan umpan balik konstruktif."
   },
   {
     icon: <Calendar className="w-8 h-8 text-indigo-600" />,
-    title: "Presence Tracking",
-    description: "Automated digital attendance systems that sync directly with parent notifications."
+    title: "Pelacakan Kehadiran",
+    description: "Sistem absensi digital otomatis yang tersinkronisasi langsung dengan notifikasi orang tua."
   },
   {
     icon: <Bell className="w-8 h-8 text-indigo-600" />,
-    title: "Smart Notifications",
-    description: "Stay ahead with automated alerts for assignments, schedule changes, and milestones."
+    title: "Notifikasi Pintar",
+    description: "Tetap terdepan dengan peringatan otomatis untuk tugas, perubahan jadwal, dan momen penting."
   },
   {
     icon: <Users className="w-8 h-8 text-indigo-600" />,
-    title: "Parent Portal",
-    description: "Keep parents informed with a dedicated dashboard showing their child's academic journey."
+    title: "Portal Orang Tua",
+    description: "Berikan akses kepada orang tua melalui dashboard khusus perjalanan akademik anak mereka."
   },
   {
     icon: <ShieldCheck className="w-8 h-8 text-indigo-600" />,
-    title: "Secure Cloud Storage",
-    description: "All academic data is encrypted and backed up daily on enterprise-grade infrastructure."
+    title: "Penyimpanan Cloud Aman",
+    description: "Semua data akademik dienkripsi dan dicadangkan harian pada infrastruktur kelas enterprise."
   }
 ];
 
@@ -45,12 +45,12 @@ export default function Features() {
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="text-indigo-600 font-bold uppercase tracking-widest text-sm mb-4">Core Capabilities</h2>
+          <h2 className="text-indigo-600 font-bold uppercase tracking-widest text-sm mb-4">Kapabilitas Utama</h2>
           <p className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight">
-            Designed for Modern Education
+            Dirancang untuk Pendidikan Modern
           </p>
           <p className="mt-4 text-slate-500 text-lg max-w-2xl mx-auto">
-            Everything you need to manage a digital classroom and monitor institutional growth in one powerful platform.
+            Semua yang Anda butuhkan untuk mengelola kelas digital dan memantau pertumbuhan institusi dalam satu platform canggih.
           </p>
         </div>
 

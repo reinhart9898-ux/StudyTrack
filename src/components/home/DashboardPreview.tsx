@@ -8,18 +8,18 @@ export default function DashboardPreview() {
         <div className="lg:flex items-center gap-16">
           <div className="lg:w-1/2 mb-16 lg:mb-0">
             <h2 className="text-4xl font-bold text-slate-900 mb-6 leading-tight">
-              Powerful analytics, <br />
-              <span className="text-indigo-600">Simplified Dashboard.</span>
+              Analitik Canggih, <br />
+              <span className="text-indigo-600">Dashboard Sederhana.</span>
             </h2>
             <p className="text-slate-600 text-lg mb-8 leading-relaxed">
-              No more manual spreadsheets. StudyTrack provides a centralized command center where every student's achievement is visible at a glance.
+              Tidak ada lagi lembar kerja manual. StudyTrack menyediakan pusat komando terpadu di mana setiap pencapaian siswa terlihat dalam sekejap.
             </p>
             
             <div className="space-y-6">
               {[
-                { icon: <TrendingUp className="w-5 h-5" />, text: "Automated GPA calculation & trend analysis", color: "bg-emerald-100 text-emerald-600" },
-                { icon: <UserCheck className="w-5 h-5" />, text: "Engagement tracking per subject & activity", color: "bg-blue-100 text-blue-600" },
-                { icon: <BookOpen className="w-5 h-5" />, text: "Detailed assignment completion heatmaps", color: "bg-indigo-100 text-indigo-600" },
+                { icon: <TrendingUp className="w-5 h-5" />, text: "Kalkulasi IPK otomatis & analisis tren", color: "bg-emerald-100 text-emerald-600" },
+                { icon: <UserCheck className="w-5 h-5" />, text: "Pelacakan keterlibatan per subjek & aktivitas", color: "bg-blue-100 text-blue-600" },
+                { icon: <BookOpen className="w-5 h-5" />, text: "Heatmap penyelesaian tugas yang mendetail", color: "bg-indigo-100 text-indigo-600" },
               ].map((item, i) => (
                 <div key={i} className="flex items-center space-x-4">
                   <div className={`p-3 rounded-xl ${item.color}`}>
@@ -47,35 +47,35 @@ export default function DashboardPreview() {
                   </div>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 rounded-full bg-indigo-500" />
-                  <span className="text-xs font-bold text-indigo-600">LIVE SYNC</span>
+                  <div className="w-3 h-3 rounded-full bg-indigo-500 animate-pulse" />
+                  <span className="text-xs font-bold text-indigo-600">SINKRONISASI LANGSUNG</span>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                  <p className="text-xs text-slate-500 mb-1">Class Attendance</p>
+                  <p className="text-xs text-slate-500 mb-1">Kehadiran Kelas</p>
                   <p className="text-2xl font-black text-slate-900">94.2%</p>
                   <div className="mt-2 w-full bg-slate-200 h-1.5 rounded-full">
                     <div className="bg-indigo-500 h-full w-[94.2%] rounded-full" />
                   </div>
                 </div>
                 <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                  <p className="text-xs text-slate-500 mb-1">Average Grade</p>
+                  <p className="text-xs text-slate-500 mb-1">Rata-rata Nilai</p>
                   <p className="text-2xl font-black text-slate-900">A-</p>
-                  <p className="text-[10px] text-emerald-600 font-bold mt-1">↑ 2% from last month</p>
+                  <p className="text-[10px] text-emerald-600 font-bold mt-1">↑ 2% dari bulan lalu</p>
                 </div>
               </div>
 
               <div className="space-y-4">
-                <h5 className="text-xs font-bold text-slate-400 uppercase tracking-widest">Recent Assignments</h5>
+                <h5 className="text-xs font-bold text-slate-400 uppercase tracking-widest">Tugas Terbaru</h5>
                 {[
-                  { name: "Algebra II - Quiz 3", status: "Completed", score: "88/100" },
-                  { name: "Calculus - Group Project", status: "Pending", score: "--" },
+                  { name: "Aljabar II - Kuis 3", status: "Selesai", score: "88/100" },
+                  { name: "Kalkulus - Proyek Grup", status: "Menunggu", score: "--" },
                 ].map((task, i) => (
                   <div key={i} className="flex justify-between items-center p-3 rounded-xl bg-slate-50 text-sm">
                     <span className="font-semibold text-slate-700">{task.name}</span>
-                    <span className={`px-2 py-1 rounded text-[10px] font-bold ${task.status === 'Completed' ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700'}`}>
+                    <span className={`px-2 py-1 rounded text-[10px] font-bold ${task.status === 'Selesai' ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700'}`}>
                       {task.status}
                     </span>
                   </div>

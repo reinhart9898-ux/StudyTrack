@@ -16,7 +16,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
-              Revolutionizing education through real-time tracking, transparent communication, and data-driven insights for institutions worldwide.
+              Merevolusi pendidikan melalui pelacakan real-time, komunikasi transparan, dan wawasan berbasis data untuk institusi di seluruh dunia.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="hover:text-indigo-500 transition-colors"><Twitter className="w-5 h-5" /></a>
@@ -27,36 +27,36 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="text-white font-semibold mb-6">Product</h3>
+            <h3 className="text-white font-semibold mb-6">Produk</h3>
             <ul className="space-y-4 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">Digital Attendance</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Grading System</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Task Management</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Academic Analytics</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Absensi Digital</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Sistem Penilaian</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Manajemen Tugas</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Analitik Akademik</a></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-6">Company</h3>
+            <h3 className="text-white font-semibold mb-6">Perusahaan</h3>
             <ul className="space-y-4 text-sm">
-              <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
+              <li><Link to="/about" className="hover:text-white transition-colors">Tentang Kami</Link></li>
+              <li><a href="#" className="hover:text-white transition-colors">Kontak</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Kebijakan Privasi</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Syarat & Ketentuan</a></li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-white font-semibold mb-6">Newsletter</h3>
-            <p className="text-sm text-slate-400 mb-4">Stay updated with our latest features and educational insights.</p>
+            <p className="text-sm text-slate-400 mb-4">Tetap terinformasi dengan fitur terbaru dan wawasan pendidikan kami.</p>
             <form className="flex space-x-2">
               <input 
                 type="email" 
-                placeholder="Enter email" 
+                placeholder="Email Anda" 
                 className="bg-slate-800 border border-slate-700 text-white rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
               <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition-colors">
-                Join
+                Gabung
               </button>
             </form>
           </div>
@@ -64,11 +64,11 @@ export default function Footer() {
         
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-xs text-slate-500 mb-4 md:mb-0">
-            © {new Date().getFullYear()} StudyTrack. All rights reserved.
+            © {new Date().getFullYear()} StudyTrack. Hak cipta dilindungi.
           </p>
           <div className="flex space-x-6 text-xs text-slate-500">
-            <a href="#" className="hover:text-slate-300">Security</a>
-            <a href="#" className="hover:text-slate-300">Compliance</a>
+            <a href="#" className="hover:text-slate-300">Keamanan</a>
+            <a href="#" className="hover:text-slate-300">Kepatuhan</a>
             <a href="#" className="hover:text-slate-300">Cookies</a>
           </div>
         </div>

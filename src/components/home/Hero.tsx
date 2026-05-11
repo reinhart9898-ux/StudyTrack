@@ -24,21 +24,21 @@ export default function Hero() {
           >
             <div className="inline-flex items-center space-x-2 bg-indigo-500/20 backdrop-blur-md border border-indigo-500/30 px-3 py-1 rounded-full mb-8">
               <span className="flex h-2 w-2 rounded-full bg-indigo-500 animate-pulse" />
-              <span className="text-indigo-300 text-xs font-bold uppercase tracking-widest">Digital Education Era</span>
+              <span className="text-indigo-300 text-xs font-bold uppercase tracking-widest">Era Edukasi Digital</span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
-              Track Progress.<br />
-              <span className="text-indigo-500">Inspire Growth.</span>
+              Pantau Progres.<br />
+              <span className="text-indigo-500">Wujudkan Prestasi.</span>
             </h1>
             
             <p className="text-slate-300 text-lg md:text-xl mb-10 max-w-xl leading-relaxed">
-              The all-in-one SaaS platform for institutions to monitor student success through real-time analytics, digital grading, and seamless communication.
+              Platform SaaS all-in-one bagi institusi untuk memantau kesuksesan siswa melalui analitik real-time, penilaian digital, dan komunikasi yang terintegrasi.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <button className="w-full sm:w-auto bg-indigo-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-indigo-700 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-indigo-600/30 flex items-center justify-center">
-                Start Monitoring Now
+              <button className="w-full sm:w-auto bg-indigo-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-indigo-700 transition-all hover:shadow-indigo-500/40 hover:scale-105 active:scale-95 shadow-xl shadow-indigo-600/30 flex items-center justify-center">
+                Mulai Memantau Sekarang
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
               
@@ -46,7 +46,7 @@ export default function Hero() {
                 <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center mr-3 group-hover:border-indigo-400 transition-colors">
                   <Play className="w-4 h-4 fill-current" />
                 </div>
-                See How It Works
+                Lihat Cara Kerjanya
               </button>
             </div>
             
@@ -63,7 +63,7 @@ export default function Hero() {
                 ))}
               </div>
               <p className="text-slate-400 text-sm">
-                <span className="text-white font-bold">500+</span> institutions already onboarded
+                <span className="text-white font-bold">500+</span> institusi telah bergabung
               </p>
             </div>
           </motion.div>
@@ -90,8 +90,8 @@ export default function Hero() {
               <Camera className="w-4 h-4 text-white" />
             </div>
           </div>
-          <h3 className="text-white font-bold text-lg mb-1">Capture Milestones</h3>
-          <p className="text-slate-400 text-sm">Every achievement documented in high-definition for portfolio building.</p>
+          <h3 className="text-white font-bold text-lg mb-1">Abadikan Momen</h3>
+          <p className="text-slate-400 text-sm">Tiap pencapaian didokumentasikan dalam definisi tinggi untuk portofolio siswa.</p>
         </div>
       </motion.div>
 
@@ -104,13 +104,13 @@ export default function Hero() {
       >
         <div className="bg-indigo-600 p-6 rounded-3xl shadow-2xl w-64 rotate-[6deg]">
           <div className="flex justify-between items-center mb-4">
-            <span className="text-indigo-200 text-xs font-bold uppercase">Live Performance</span>
+            <span className="text-indigo-200 text-xs font-bold uppercase">Performa Langsung</span>
             <div className="flex space-x-1">
               {[1, 2, 3].map(i => <div key={i} className="w-1 h-3 bg-white/40 rounded-full" />)}
             </div>
           </div>
           <div className="text-3xl font-bold text-white mb-2">+24%</div>
-          <p className="text-indigo-100 text-sm">Average improvement in student engagement this semester.</p>
+          <p className="text-indigo-100 text-sm">Rata-rata peningkatan keterlibatan siswa semester ini.</p>
         </div>
       </motion.div>
     </section>

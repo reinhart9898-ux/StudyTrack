@@ -12,7 +12,7 @@ async function startServer() {
 
   // API routes
   app.get("/api/health", (req, res) => {
-    res.json({ status: "ok", message: "StudyTrack API is running" });
+    res.json({ status: "ok", message: "API StudyTrack sedang berjalan" });
   });
 
   // Vite middleware for development
